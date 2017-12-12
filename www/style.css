@@ -1,27 +1,52 @@
-header img {
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    align-content: center;
+header {
+    display: flex;
+    flex-flow: row nowrap; 
+    margin: auto;
+    height: 110px;
+    position: relative;
+    text-align: center;
 }
 
-nav ul {
+nav {
+    width: 90%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
 }
-/* Pourquoi cela fait du flex alors que je l'applique à l'ul et pas au container lui-même ?*/
+/* 
+Pourquoi cela fait du flex alors que je l'applique à l'ul et pas au container lui-même ?
+C'est ce qui me bloquait avant : j'appliquais flex à containeur img 
+*/
+
+
 .containeur {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 75%;
+    margin: auto;
 }
 
+
+/*
+.containeur {
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.25fr;
+    margin: auto;
+}
+*/
 
 .containeur img {
     width: 150px;
     height: 90%;
-    padding: 5px 5px 5px 5px;
-    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
 }
