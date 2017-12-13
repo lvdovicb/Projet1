@@ -1,18 +1,71 @@
+
+
 header {
     display: flex;
+    height: 150px;
+    width: 90%;
     flex-flow: row nowrap; 
     margin: auto;
-    height: 110px;
-    position: relative;
-    text-align: center;
-}
+ }
 
 nav {
-    width: 90%;
+    width: 50%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+
 }
+
+
+#cercle_tripode2 { 
+    display: none;
+  }
+
+.logo_container:hover #cercle_tripode {
+    display : none;
+  }
+
+.logo_container:hover #cercle_tripode2 {
+    display : block;
+  }
+
+
+
+
+
+@keyframes slider {
+    0% { left: 0%; }
+    25% { left: -100%; }
+    50% { left: -200%; }
+    75% { left: -300%; }
+    100% {left: -400%; }
+    }
+    
+
+    div#slider { 
+        width: 90%;
+        height: 440px;
+        overflow: hidden;
+        margin: auto;
+     }
+
+     div#slider figure { 
+        position: relative;
+        overflow: hidden;
+        width: 400%;
+        margin: auto;
+        left: 0;
+        text-align: left;
+        font-size: 0;
+        animation: 10s slider infinite; 
+      }
+
+    div#slider figure img { 
+        width: 1160px; 
+        height: 440px; 
+        float: left;
+     }
+    
+    
 /* 
 Pourquoi cela fait du flex alors que je l'applique à l'ul et pas au container lui-même ?
 C'est ce qui me bloquait avant : j'appliquais flex à containeur img 
@@ -23,7 +76,7 @@ C'est ce qui me bloquait avant : j'appliquais flex à containeur img
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 75%;
+    width: 90%;
     margin: auto;
 }
 
@@ -41,9 +94,8 @@ C'est ce qui me bloquait avant : j'appliquais flex à containeur img
 
 .containeur img {
     width: 150px;
-    height: 90%;
     padding: 5px;
-    margin: 20px;
+    margin: 30px;
 }
 
 footer {
