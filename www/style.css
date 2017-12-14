@@ -2,61 +2,18 @@
 
 header {
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     height: 150px;
     width: 90%;
     margin: auto;
  }
 
-.logo_container {
-    height: 100%;
+.cercles {
+    display: flex;
     width: 128px;
     height: 128px;
 }
-
-#logo {
-   ;
-}
-
-nav {
-    ;
-}
-
-nav ul {
-    display: flex;
-    flex-flow: row nowrap;
-    
-    margin: 30px 0;
-    list-style: none;
-    justify-content: space-between;
-}
-
-#baseline {
-    display: flex;
-}
-
-#baseline img {
-    justify-content: center;
-}
-
-input {
-    flex-grow: 0;
-}
-
-logo {
-    ;
-
-}
-.social {
-   display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
-nav  {
-    display: flex;
-
-}
-
 
 #cercle_tripode {
     max-width: 100%;
@@ -69,13 +26,63 @@ nav  {
     max-height: 100%;
   }
 
-.logo_container:hover #cercle_tripode {
+.cercles:hover #cercle_tripode {
     display : none;
   }
 
-.logo_container:hover #cercle_tripode2 {
+.cercles:hover #cercle_tripode2 {
     display : block;
   }
+
+
+#logo_menu {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: stretch;
+   height: 50%;
+}
+
+#search_social {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    
+    height: 50%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#baseline {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    flex-grow: 0;
+}
+
+logo {
+    margin-top: 10px;
+    flex: 1;
+
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+
+nav  {
+    display: flex;
+
+}
+
+
 
 
 
@@ -113,13 +120,6 @@ nav  {
         height: 440px; 
         float: left;
      }
-    
-    
-/* 
-Pourquoi cela fait du flex alors que je l'applique à l'ul et pas au container lui-même ?
-C'est ce qui me bloquait avant : j'appliquais flex à containeur img 
-*/
-
 
 .containeur {
     display: flex;
@@ -129,17 +129,6 @@ C'est ce qui me bloquait avant : j'appliquais flex à containeur img
     margin: auto;
 }
 
-
-/*
-.containeur {
-    display: grid;
-    width: 75%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0.25fr;
-    margin: auto;
-}
-*/
 
 .containeur img {
     width: 150px;
