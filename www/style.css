@@ -78,42 +78,59 @@ nav ul {
     line-height: 18px;
     font-size: 15px;
     font-weight: 300;
-    text-decoration: none;
     color: black;
     min-width: 420px;
     
 }
 
-nav a {
-    color: rgb(0, 0, 0);
+li .accueil  {
+    color: #E21E79;
 }
 
-nav:hover a {
-    text-decoration: none
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+nav a:hover {
     color: pink;
     }
 
-#sous-catalogue ul {
-    display: none;
 
+.sous-menu ul {
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    font-size: 14px;
+    
 }
 
-#sous-catalogue:hover ul {
+.sous-menu:hover ul {
     display: block;
+    position: absolute;
+    z-index: 1;
     flex-flow: column nowrap;
-    width: 180px;
-    z-index: 
+    background-color: #ffffff;
+    padding-left: 10px;
+    border-radius: 4px;    
+    
 }
 
-#sous-events {
-    display: none;
-}
-
-#sous-maison {
-    display: none;
+.sous-menu ul a:hover {
+    text-align: left;
+    background-color: #f5f5f5;
    
 }
 
+.sous-menu ul a {
+    font-size: 16px; 
+}
+
+.sous-menu ul li {
+    margin: 5px;
+    width: 150px;
+}
 
 
 #baseline {
@@ -145,16 +162,7 @@ logo {
 }
 
 
-nav  {
-    display: flex;
-
-}
-
-
-
-
-
-
+    /* SLIDER */
 
 @keyframes slider {
     25%  { left: 0%; }
@@ -203,65 +211,62 @@ nav  {
     margin: 30px;
 }
             
-            .containeur img:hover {
-                    opacity: 0.3;
-                    background: pink;
-                    /*background: rgb(175, 169, 169);*/
-            }
+.containeur img:hover {
+    opacity: 0.3;
+    background: pink;
+}
 
-            /*
-            * {
-                margin: 0;
-                padding: 0;
-                border: 0;
-            }
-                
-            html {
-                font-family: "ubuntu-condensed", arial, sans-serif;
-            }
-            
-                    /* relevant styles */
-            /*
-            .view {
-                position: relative;
-                max-height: 100%;
-                width: 150px;
-            }
-            
-            .mask {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: #E21E79;
-                color: #fff;
-                visibility: hidden;
-                opacity: 0.7;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            
-            
-                /* transition effect. not necessary */
-            /*    transition: opacity .2s, visibility .2s;
-            }
-            
-            .view:hover .mask {
-                visibility: visible;
-                opacity: 0.6;
-            }
-            
-            .titre {
-                transition: .2s;
-                transform: translateY(1em);
-            }
-            
-            .view:hover .titre {
-                transform: translateY(0);
-            }
+        /* Tentative pour afficher le titre du livre
+        au-dessus de l'image avec hover - Échec !!!
 
-            */
+        
+            
+        html {
+            font-family: "ubuntu-condensed", arial, sans-serif;
+        }
+        
+                /* relevant styles */
+        /*
+        .view {
+            position: relative;
+            max-height: 100%;
+            width: 150px;
+        }
+        
+        .mask {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #E21E79;
+            color: #fff;
+            visibility: hidden;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        
+            // transition effect. not necessary //
+            transition: opacity .2s, visibility .2s;
+        }
+        
+        .view:hover .mask {
+            visibility: visible;
+            opacity: 0.6;
+        }
+        
+        .titre {
+            transition: .2s;
+            transform: translateY(1em);
+        }
+        
+        .view:hover .titre {
+            transform: translateY(0);
+        }
+
+        */
 footer {
     display: flex;
     flex-flow: column nowrap;
